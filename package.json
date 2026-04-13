@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop -p 5000",
     "build": "gatsby build",
+    "deploy": "wrangler pages deploy ./public",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "plop": "^3.0.5",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "wrangler": "^4.82.2"
   }
 }
