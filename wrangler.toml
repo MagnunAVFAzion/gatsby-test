@@ -1,26 +1,15 @@
 # Wrangler configuration for Gatsby static site deployment to Cloudflare Pages
 # See: https://developers.cloudflare.com/workers/wrangler/configuration/
+# For static sites, use: npx wrangler pages deploy ./public
 
 name = "gatsby-ecommerce-theme"
 compatibility_date = "2024-01-01"
 
-[site]
-# The directory where Gatsby outputs the built static files
-bucket = "./public"
-
-# Pages configuration
+# For Cloudflare Pages static site deployment
+# Gatsby builds static files to the ./public directory
 pages_build_output_dir = "./public"
 
-# Build configuration for Cloudflare Pages
-[build]
-command = "npm run build"
-
-# Environment variables (add your own as needed)
-# [vars]
-# Example environment variables - uncomment and modify as needed
-# API_URL = "https://api.example.com"
-
-# Development settings
+# Development settings for local preview
 [dev]
 port = 8788
 local_protocol = "http"
